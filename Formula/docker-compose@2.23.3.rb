@@ -21,7 +21,7 @@ class DockerComposeAT2233 < Formula
       -s -w
       -X github.com/docker/compose/v2/internal.Version=#{version}
     ]
-    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd"
+    system "go", "build", *std_go_args(ldflags:), "./cmd"
   end
 
   def caveats
